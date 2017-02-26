@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red0\green0\blue0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 This app i have created on the latest xcode (8.2.1) using objective C, storyboard and autolauout. \
+Below is how i implemented the main app.\
+\
+
+\fs36 Add a persistence layer for the app, which should be utilized by the favorites list. When the app terminates for any reason and is restarted, the favorites list needs to maintain a consistent state.
+\fs24 \
+\
+\cf2 (I have implemented this feature using NSKeyedArchiver (to serialize model object) and convert them to data and save it in NSUSerDefault.\cf0 \
+\
+
+\fs36 Implement all the features so that the user interface is responsive and smooth at all times.\
+\
+
+\fs24 \cf2 (I have implemented this feature using by calling the web service asynchronously and after data is received updating the UI on main thread. So that, app remains responsive all the times.\
+\
+
+\fs48 \cf0 Apart from the main application below are the feature i have implemented.
+\fs24 \cf2 \
+\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf3 {\listtext	\'95	}* (**UI**) Make sure that all of the assets (labels, images) are displayed nicely (no cuts, same size). The app should reflect an easy to use and consistent interface.\
+\ls1\ilvl0
+\fs36 {\listtext	\'95	}
+\fs24 * (**Networking**) Make sure that each and every response of a request ignores locally or remotely cached data.\
+\ls1\ilvl0
+\fs36 {\listtext	\'95	}
+\fs24 * (**Data handling**) Introduce a validation feature. This feature postprocesses the recieved list and grays out all invalid vehicles. A vehicle is invalid when the AccidentFree property is false. Prevent users from adding an invalid car to the favorites list.\
+\ls1\ilvl0
+\fs36 {\listtext	\'95	}
+\fs24 * (**Multithreading**) Show the first image of each vehicle. Get the image in an asynchronous way.\
+\ls1\ilvl0
+\fs36 {\listtext	\'95	}
+\fs24 * (**Architecture**) Add a badge to the tab bar favorites list item. The badge should represent the number of vehicles that have been added to the favorites list since it was last viewed. When the user switches to the favorites list, the badge should disappear.
+\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf3 \
+\
+
+\fs24 \cf2 \
+\
+}
